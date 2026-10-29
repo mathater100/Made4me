@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkishit | Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fafafa;
+            color: #1a1a1a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 5%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        .brand {
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            color: #666;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #1a1a1a;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        header {
+            padding: 100px 0 60px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            color: #555;
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        .social-btn {
+            display: inline-block;
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .social-btn:hover {
+            background-color: #333;
+        }
+       
+        .social-btn:active {
+            transform: scale(0.98);
+        }
+
+        section {
+            padding: 40px 0;
+        }
+
+        .section-header {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .about-text {
+            color: #444;
+            font-size: 1.1rem;
+            max-width: 650px;
+        }
+
+        .currently {
+            margin-top: 40px;
+            padding: 18px 24px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: #444;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+            70% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+
+        .skills-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            max-width: 650px;
+        }
+
+        .skill-tag {
+            background: #fff;
+            border: 1px solid #eaeaea;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            color: #555;
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            border-color: #1a1a1a;
+            color: #1a1a1a;
+        }
+
+        .contact-card {
+            background-color: #fff;
+            border: 1px solid #eaeaea;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 20px 0 60px;
+        }
+
+        .contact-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .contact-card p {
+            color: #666;
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+        }
+
+        .contact-link {
+            font-weight: 600;
+            color: #1a1a1a;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 2px;
+            transition: border-color 0.2s ease;
+        }
+
+        .contact-link:hover {
+            border-color: #1a1a1a;
+        }
+
+        footer {
+            padding: 40px 0;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid #eaeaea;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            header {
+                padding: 60px 0 40px;
+            }
+            footer {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <div class="brand">Parkishit.</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <header>
+                <h1>Hi, I'm Parkishit.</h1>
+                <p>I'm a web developer focused on building clean, responsive, and accessible digital experiences from the ground up.</p>
+                <a href="https://github.com/mathater100" target="_blank" rel="noopener noreferrer" class="social-btn">Find me on GitHub</a>
+            </header>
+
+            <section id="about">
+                <h2 class="section-header">About Me</h2>
+                <div class="about-text">
+                    <p>I'm a front-end developer who loves tinkering with HTML, CSS, and JavaScript. I'm a bit obsessive about the little things, like dialing in the typography, nailing responsive layouts, and keeping my code perfectly clean.</p>
+                    <br>
+                    <p>I'm always trying to pick up new skills, but when I finally close my laptop, you'll probably find me reading, experimenting in the kitchen, or hunting down a really good cup of coffee.</p>
+                </div>
+               
+                <div class="currently">
+                    <span class="status-dot"></span>
+                    <span><strong>Status:</strong> Open to new opportunities and currently building side projects.</span>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2 class="section-header">What I Work With</h2>
+                <div class="skills-wrapper">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript (ES6+)</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Tailwind CSS</span>
+                    <span class="skill-tag">Git & GitHub</span>
+                    <span class="skill-tag">Responsive Design</span>
+                    <span class="skill-tag">Figma</span>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="contact-card">
+                    <h3>Let's build something together.</h3>
+                    <p>You can find my latest work, open-source contributions, and ways to reach me over on my GitHub profile.</p>
+                    <a href="https://github.com/mathater100" target="_blank" rel="noopener noreferrer" class="contact-link">Visit my GitHub</a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 Parkishit. Hand-coded with HTML & CSS.</p>
+            <p>Based in Jaipur, India</p>
+        </footer>
+    </div>
+</body>
+</html>
